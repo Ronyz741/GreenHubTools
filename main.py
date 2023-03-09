@@ -1,7 +1,9 @@
 import json
+import getpass
 
 if __name__ == '__main__':
-    file_path = 'C:/Users/10187/AppData/Roaming/GreenHub/config.json'
+    user_name = getpass.getuser();
+    file_path = 'C:/Users/' + user_name + '/AppData/Roaming/GreenHub/config.json'
     file = open(file_path, 'r', encoding='utf-8')
     dic_data = json.load(file)
     file.close()
